@@ -31,7 +31,11 @@ async function getCsrfToken() {
     }
 }
 
-let handlez = ["acct1", "acct2", "acct3"]; // enter usernames here
+function nameParser(namez) {
+    return namez.split(' ');
+}
+
+let handlez = nameParser("name1 name2 name3"); // enter usernames here
 const TOKEN = await getCsrfToken();
 
 for (const handle of handlez) {
